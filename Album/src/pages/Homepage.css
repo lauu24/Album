@@ -1,0 +1,154 @@
+:root{
+    --fuente-texto: Arial,sans-serif;
+    --fuente-titulo: "Bungee", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    font-family: var(--fuente-titulo);
+    font-weight: 400;
+    font-style: normal;
+}
+h2{
+    font-family: var(--fuente-titulo);
+    font-weight: 20;
+    font-style: normal;
+}
+
+header{
+    align-items: center; 
+    display: flex;
+    flex-direction: column;
+    padding-top: 2em;
+}
+
+header h1{
+    color:royalblue;
+    text-align: center;
+    font-size: 12mm;
+}
+
+header img{
+    width:200px;
+    height: 100px;
+    object-fit: fill;
+}
+
+.home-intro{
+    padding: 4em 2em 4em 2em;
+    position: relative;
+}
+
+.home-intro p{
+    font-family: var(--fuente-texto);
+    padding-top: 0.5em;
+    font-size: 24px;
+    padding-bottom: 5em;
+    text-align: justify;
+}
+
+.home-intro::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 115px;
+    background: linear-gradient(to bottom, transparent, rgb(92, 132, 224));
+}
+
+
+.container-arquero, .container-player {
+    background-color: rgb(92, 132, 224);
+    align-items: center; 
+    display: flex;
+    flex-direction: column;
+}
+
+.container-player{
+    background-color: rgb(221, 221, 221);
+    padding-top: 8em;
+    position: relative;
+}
+
+.container-player::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 115px;
+    background: linear-gradient(to bottom, rgb(92, 132, 224), transparent);
+}
+
+.title-arquero, .title-players{
+    padding: 2em;
+    text-align: left;
+    width: 100%;
+    color: white;
+}
+
+.title-players{
+    color: royalblue;
+}
+
+.cards {
+    width: 100%;
+    max-width: 1200px;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+    padding: 2em 2em 5em 2em;
+}
+
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.41);
+    width:fit-content;
+    border-radius: 20px;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.538);
+}
+
+.player-detail {
+    background-color: rgb(221, 221, 221);
+    position: relative;
+    padding: 0em 4em 4em 4em;
+}
+
+.player-detail h1, h2{
+    color: royalblue;
+}
+
+.card-detail p{
+    font-family: var(--fuente-texto);
+    font-size: 24px;
+    text-align: justify;
+    font-weight: bold;
+}
+
+.card-detail{
+    align-items: center; 
+    display: flex;
+    flex-direction: column;
+    padding: 5em;
+}
+
+.card-detail img{
+    padding-bottom: 4em;
+}
+
+.Back{
+    padding-top: 4em;
+    text-decoration: none;
+}
